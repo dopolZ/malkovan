@@ -1,0 +1,98 @@
+@keyframes body {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes shine {
+   0% {
+      color: rgb(0, 0, 0, .0);
+      text-shadow: none;
+   }
+
+   40% {
+      color: rgb(0, 0, 0, .0);
+      text-shadow: none;
+   }
+
+   100% {
+      color: rgb(0, 200, 0, .7);
+      text-shadow:
+         1px  1px 2vw black,
+         1px -1px 2vw black,
+        -1px  1px 2vw black,
+        -1px -1px 2vw black;
+   }
+}
+
+body {
+   align-items: center;
+   animation: body 5s;
+   background: black;
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+}
+
+canvas {
+   position: fixed;
+   z-index: -1;
+}
+
+p {
+   animation: shine 10s linear forwards;
+   font: bold 5vw system-ui;
+   margin: 0;
+   padding: 0;
+}
+
+.name {
+   letter-spacing: -.25vw;
+   text-transform: uppercase;
+}
+
+.mail {
+   letter-spacing: .1vw;
+}
+
+.time {
+   display: flex;
+   justify-content: space-between;
+   margin: 0 0 0 .5vw;
+   position: relative;
+   width: 44vw;
+}
+
+.value {
+   text-align: center;
+}
+
+.des {
+   font-size: 1.5vw;
+   margin: -1vw 0 0;
+}
+
+@media (orientation: portrait) {
+   p {
+      font: bold 8vw system-ui;
+   }
+
+   .mail {
+      letter-spacing: .4vw;
+   }
+
+   .time {
+      width: 73vw;
+   }
+
+   .des {
+      font-size: 3vw;
+   }
+}
