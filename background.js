@@ -14,9 +14,9 @@ const arr = []
 for (let i = 0; i < col; i++) arr[i] = 1
 
 for (let i = 0; i < row; i++) {
-   $.fillStyle = 'rgba(0, 0, 0, .09)'
+   $.fillStyle = 'rgba(0, 0, 0, .07)'
    $.fillRect(0, 0, W, H)
-   $.fillStyle = '#0f0'
+   $.fillStyle = 'rgba(0, 255, 0, 1)'
    $.font = font + 'px system-ui'
 
    for (let i = 0; i < arr.length; i++) {
@@ -26,10 +26,10 @@ for (let i = 0; i < row; i++) {
    }   
 }
 
-function draw() {
+const draw = () => {
    $.fillStyle = 'rgba(0, 0, 0, .05)'
    $.fillRect(0, 0, W, H)
-   $.fillStyle = '#0f0'
+   $.fillStyle = 'rgb(0, 255, 0)'
    $.font = font + 'px system-ui'
 
    for (let i = 0; i < arr.length; i++) {
@@ -41,4 +41,4 @@ function draw() {
    }
 }
 
-setTimeout(() => setInterval(draw, 130))
+setTimeout(() => setInterval(draw, 100))
